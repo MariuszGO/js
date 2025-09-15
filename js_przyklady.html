@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Przykłady użycia JS + HTML</title>
+    <link rel="styesheet" src="style.css">
+    <script src="js_plik.js"></script>
+</head>
+
+<body>
+    <p>TO p</p>
+    <p>To tez</p>
+
+
+    <h1>getElementById</h1>
+    <form>
+        <label>Imię: <input type="text" id="imie"></label>
+        <button type="button" onclick="pokazImie()">Wyślij</button>
+    </form>
+
+
+    <h2>2. Zliczanie wszystkich inputów (getElementsByTagName)</h2>
+    <form>
+        <input type="text" placeholder="Imię"><br>
+        <input type="email" placeholder="Email"><br>
+        <input type="password" placeholder="Hasło"><br>
+        <button type="button" onclick="policzPola()">Policz pola</button>
+    </form>
+
+
+    <h2>3. Podświetlanie ważnych pól (getElementsByClassName)</h2>
+    <form>
+        <input type="text" placeholder="Imię" class="wazne"><br>
+        <input type="email" placeholder="Email" class="wazne"><br>
+        <input type="password" placeholder="Hasło" class="wazne"><br>
+        <button type="button" onclick="podswietlPola()">Podświetl</button>
+    </form>
+
+
+    <h2>4. Walidacja formularza</h2>
+    <form onsubmit="return walidacja()">
+        <input type="text" id="val_imie" placeholder="Imię"><br>
+        <input type="email" id="val_email" placeholder="Email"><br>
+        <button type="submit">Wyślij</button>
+    </form>
+
+
+    <h2>5. Liczenie zaznaczonych checkboxów</h2>
+    <form>
+        <label><input type="checkbox"> Opcja 1</label><br>
+        <label><input type="checkbox"> Opcja 2</label><br>
+        <label><input type="checkbox"> Opcja 3</label><br>
+        <button type="button" onclick="policzZaznaczone()">Policz zaznaczone</button>
+    </form>
+
+
+    <h2>6. Podsumowanie danych formularza</h2>
+    <form>
+        <input type="text" id="sum_imie" placeholder="Imię"><br>
+        <input type="text" id="sum_nazwisko" placeholder="Nazwisko"><br>
+        <input type="email" id="sum_email" placeholder="Email"><br>
+        <button type="button" onclick="pokazPodsumowanie()">Pokaż podsumowanie</button>
+    </form>
+    <div id="wynik" style="margin-top: 10px; font-weight: bold;"></div>
+</body>
+
+</html>
