@@ -24,3 +24,36 @@
 
 
         });
+
+
+        const select = document.getElementById('kolorTekstu');
+        const paragrafy = document.querySelectorAll('p');
+
+        select.addEventListener('change', () => {
+            const wybranyKolor = select.value;
+
+            paragrafy.forEach(p => {
+                p.style.color = wybranyKolor;
+            });
+        });
+
+
+
+        function zmientlo() {
+
+            let kolor = document.getElementById('kol').value;
+
+            document.body.style.backgroundColor = kolor;
+        }
+
+        function zmienwielosc() {
+            let wielkosc_liter = document.getElementById('wielkosc').value;
+
+            console.log(wielkosc_liter);
+            const pismo = document.querySelector('p');
+
+
+
+            pismo.style.fontSize = wielkosc_liter + "px";
+
+        }
