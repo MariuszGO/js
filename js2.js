@@ -44,6 +44,7 @@
             let kolor = document.getElementById('kol').value;
 
             document.body.style.backgroundColor = kolor;
+            document.querySelector('p').style.color = 'red';
         }
 
         function zmienwielosc() {
@@ -55,5 +56,31 @@
 
 
             pismo.style.fontSize = wielkosc_liter + "px";
+            pismo.style.fontFamily = "Comic Sans MS";
+        }
+
+
+        
+        function zmienwielosc2() {
+            let wielkosc_liter = parseInt(document.getElementById('wielkosc').value);
+            let zmienna=0;
+        
+
+            console.log(wielkosc_liter);
+            const pismo = document.querySelectorAll('p');
+
+            pismo.forEach(elemnet_tab => {
+
+                wielkosc_liter = wielkosc_liter + zmienna;
+                console.log("wielkosc" + wielkosc_liter);
+                elemnet_tab.style.fontSize = wielkosc_liter + "px";
+                elemnet_tab.style.fontFamily = "Serif";
+                zmienna=zmienna+10;
+                console.log("zmienna" + zmienna);
+            });
+
+            //document.getElementsByClassName
+            
+          //  pismo.style.fontSize = wielkosc_liter + "px";
 
         }
